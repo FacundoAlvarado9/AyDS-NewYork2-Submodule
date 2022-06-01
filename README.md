@@ -43,16 +43,22 @@ Importar el servicio
 import ayds.newyork2.newyorkdata.nytimes.NYTimesService
 ```
 
-Para obtener una instancia del servicio (en Kotlin),
+Para obtener una instancia del servicio (en Kotlin)
 
 ```kotlin
 val nytService : NYTimesService = NYTimesInjector.nyTimesService
 ```
 
-Para hacer uso del módulo, utilizar el método 
+Para hacer uso del módulo, utilizar el método getArtist
 
 ```kotlin
-nytService.getArtist("Nombre del artista (String)")
+fun getArtist(artistName: String) : NYTimesArtistInfo?
+```
+
+El metodo se usa de la siguiente manera
+
+```kotlin
+nytService.getArtist("Duki")
 ```
 Y esta llamada retorna: 
 
@@ -68,3 +74,4 @@ data class NYTimesArtistInfo(
 }
 ```
 * O *null* en caso de no ser encontrado
+* En el caso de que no se pueda resolver la consulta el metodo tira una Exception
