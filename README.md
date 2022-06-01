@@ -23,13 +23,13 @@ git submodule add git@github.com:FacundoAlvarado9/AyDS-NewYork2-Submodule.git <d
 ```
 
 2. Indicar el path del módulo en *settings.gradle*
-```
+```gradle
 include ':NewYorkTimesData'
 project(':NewYorkTimesData').projectDir = new File(<directorio>)
 ```
 
 3. Añadir la dependencia *build.gradle*
-```
+```gradle
 implementation project(":NewYorkTimesData")
 ```
 
