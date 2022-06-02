@@ -9,7 +9,7 @@ private const val ABSTRACT  = "abstract"
 private const val WEB_URL = "web_url"
 
 
-class NYTimesToArtistResolverImpl : NYTimesToArtistResolver {
+internal class NYTimesToArtistResolverImpl : NYTimesToArtistResolver {
 
     override fun getArtistFromExternalData(serviceData: String?, artistName: String) : NYTimesArtistInfo? {
         return try {
